@@ -28,12 +28,21 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.loginEmail.text.toString()
             val password = binding.loginPassword.text.toString()
 
+<<<<<<< HEAD
             if (email.isNotEmpty() && password.isNotEmpty()){
 
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
                     if (it.isSuccessful){
                         val intent = Intent(this, PreferenceActivity::class.java)
                         startActivity(intent)
+=======
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+
+                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        val intent = Intent(this, PreferenceActivity::class.java)
+                        startActivity(intent)  // Redirect to PreferenceActivity on successful login
+>>>>>>> d37817a (Initial commit)
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
@@ -58,7 +67,11 @@ class LoginActivity : AppCompatActivity() {
             view.findViewById<Button>(R.id.btnCancel).setOnClickListener {
                 dialog.dismiss()
             }
+<<<<<<< HEAD
             if (dialog.window != null){
+=======
+            if (dialog.window != null) {
+>>>>>>> d37817a (Initial commit)
                 dialog.window!!.setBackgroundDrawable(ColorDrawable(0))
             }
             dialog.show()
@@ -66,16 +79,28 @@ class LoginActivity : AppCompatActivity() {
 
         binding.signupRedirectText.setOnClickListener {
             val signupIntent = Intent(this, SignupActivity::class.java)
+<<<<<<< HEAD
             startActivity(signupIntent)
+=======
+            startActivity(signupIntent)  // Redirect to SignupActivity
+>>>>>>> d37817a (Initial commit)
         }
     }
 
     //Outside onCreate
+<<<<<<< HEAD
     private fun compareEmail(email: EditText){
         if (email.text.toString().isEmpty()){
             return
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()){
+=======
+    private fun compareEmail(email: EditText) {
+        if (email.text.toString().isEmpty()) {
+            return
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()) {
+>>>>>>> d37817a (Initial commit)
             return
         }
         firebaseAuth.sendPasswordResetEmail(email.text.toString())
@@ -85,4 +110,8 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d37817a (Initial commit)

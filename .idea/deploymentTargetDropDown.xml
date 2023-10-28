@@ -7,11 +7,19 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
+<<<<<<< HEAD
             <value value="C:\Users\akhi\.android\avd\Resizable_Experimental_API_34.avd" />
+=======
+            <value value="C:\Users\akhi\.android\avd\Pixel_7_Pro_API_30.avd" />
+>>>>>>> d37817a (Initial commit)
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
+<<<<<<< HEAD
     <timeTargetWasSelectedWithDropDown value="2023-10-27T04:57:33.407586Z" />
+=======
+    <timeTargetWasSelectedWithDropDown value="2023-10-28T16:27:56.962641800Z" />
+>>>>>>> d37817a (Initial commit)
   </component>
 </project>

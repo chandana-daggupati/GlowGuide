@@ -3,7 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+<<<<<<< HEAD
     android:layout_height="match_parent"
+=======
+    android:layout_height="wrap_content"
+>>>>>>> d37817a (Initial commit)
     android:orientation="vertical"
     android:background="@drawable/glowguide"
     android:padding="16dp"
@@ -83,7 +87,11 @@
         android:inputType="text" />
 
     <ImageView
+<<<<<<< HEAD
         android:layout_width="367dp"
+=======
+        android:layout_width="329dp"
+>>>>>>> d37817a (Initial commit)
         android:layout_height="329dp"
         android:src="@drawable/hair_types"
     />
