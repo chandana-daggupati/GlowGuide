@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="QuestionText">
+        <item name="android:textColor">#FFFFFF</item> <!-- White text color -->
+        <item name="android:textStyle">bold</item> <!-- Bold text style -->
+        <item name="android:textColorHint">#FF03DAC5</item> <!-- White hint text color -->
+        <item name="backgroundTint">#FFFFFF</item> <!-- Set the underline color to white -->
+    </style>
+
+</resources>

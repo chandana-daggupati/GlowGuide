@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/glowguide"
+    android:padding="16dp"
+    tools:context=".PreferenceActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skin Type:"
+        android:fontFamily="cursive"
+        android:textSize="18sp"
+        style="@style/QuestionText"
+        />
+
+    <RadioGroup
+        android:id="@+id/skinTypeRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/skinTypeNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/QuestionText"
+            android:textSize="18sp"
+            android:fontFamily="cursive"
+            android:text="Normal"/>
+        <RadioButton
+            android:id="@+id/skinTypeDry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/QuestionText"
+            android:textSize="18sp"
+            android:fontFamily="cursive"
+            android:text="Dry"
+            />
+        <RadioButton
+            android:id="@+id/skinTypeOily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/QuestionText"
+            android:textSize="18sp"
+            android:fontFamily="cursive"
+            android:text="Oily"/>
+        <RadioButton
+            android:id="@+id/skinTypeCombination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/QuestionText"
+            android:textSize="18sp"
+            android:fontFamily="cursive"
+            android:text="Combination"/>
+        <RadioButton
+            android:id="@+id/skinTypeSensitive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/QuestionText"
+            android:textSize="18sp"
+            android:fontFamily="cursive"
+            android:text="Sensitive"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/QuestionText"
+        android:textSize="18sp"
+        android:fontFamily="cursive"
+        android:text="Hair Type:"/>
+
+    <EditText
+        android:id="@+id/hairTypeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/QuestionText"
+        android:hint="Enter your hair type"
+        android:fontFamily="cursive"
+        android:inputType="text" />
+
+    <ImageView
+        android:layout_width="367dp"
+        android:layout_height="329dp"
+        android:src="@drawable/hair_types"
+    />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Preferences" />
+</LinearLayout>
