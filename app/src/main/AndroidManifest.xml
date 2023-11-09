@@ -29,15 +29,14 @@
             android:exported="false">
 
         </activity>
-<<<<<<< HEAD
-=======
+
         <activity
             android:name=".PreferenceActivity"
             android:exported="false">
 
         </activity>
 
->>>>>>> d37817a (Initial commit)
+
     </application>
 
 </manifest>
