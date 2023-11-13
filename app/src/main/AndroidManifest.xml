@@ -29,6 +29,14 @@
             android:exported="false">
 
         </activity>
+
+        <activity
+            android:name=".PreferenceActivity"
+            android:exported="false">
+
+        </activity>
+
+
     </application>
 
 </manifest>

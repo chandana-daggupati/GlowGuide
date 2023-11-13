@@ -28,12 +28,13 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.loginEmail.text.toString()
             val password = binding.loginPassword.text.toString()
 
-            if (email.isNotEmpty() && password.isNotEmpty()){
 
-                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
-                    if (it.isSuccessful){
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+
+                firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                    if (it.isSuccessful) {
                         val intent = Intent(this, PreferenceActivity::class.java)
-                        startActivity(intent)
+                        startActivity(intent)  // Redirect to PreferenceActivity on successful login
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
@@ -58,7 +59,8 @@ class LoginActivity : AppCompatActivity() {
             view.findViewById<Button>(R.id.btnCancel).setOnClickListener {
                 dialog.dismiss()
             }
-            if (dialog.window != null){
+
+            if (dialog.window != null) {
                 dialog.window!!.setBackgroundDrawable(ColorDrawable(0))
             }
             dialog.show()
@@ -66,16 +68,18 @@ class LoginActivity : AppCompatActivity() {
 
         binding.signupRedirectText.setOnClickListener {
             val signupIntent = Intent(this, SignupActivity::class.java)
-            startActivity(signupIntent)
+
+            startActivity(signupIntent)  // Redirect to SignupActivity
         }
     }
 
     //Outside onCreate
-    private fun compareEmail(email: EditText){
-        if (email.text.toString().isEmpty()){
+    private fun compareEmail(email: EditText) {
+        if (email.text.toString().isEmpty()) {
             return
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()) {
+
             return
         }
         firebaseAuth.sendPasswordResetEmail(email.text.toString())
@@ -85,4 +89,6 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
     }
+
 }
+
