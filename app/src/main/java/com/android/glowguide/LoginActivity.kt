@@ -1,6 +1,8 @@
 package com.android.glowguide
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -33,6 +35,7 @@ class LoginActivity : AppCompatActivity() {
 
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
+                        saveLoginDetails(email)
                         val intent = Intent(this, PreferenceActivity::class.java)
                         startActivity(intent)  // Redirect to PreferenceActivity on successful login
                     } else {
@@ -88,6 +91,16 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Check your email", Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+    private fun saveLoginDetails(email: String) {
+        val sharedPreferences: SharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        // Save email and set loggedIn to true
+        editor.putString("email", email)
+        editor.putBoolean("loggedIn", true)
+
+        editor.apply()
     }
 
 }
