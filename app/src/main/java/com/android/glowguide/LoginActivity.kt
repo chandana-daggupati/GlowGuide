@@ -88,7 +88,7 @@ class LoginActivity : AppCompatActivity() {
         firebaseAuth.sendPasswordResetEmail(email.text.toString())
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "Check your email", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Check your email pl", Toast.LENGTH_SHORT).show()
                 }
             }
     }

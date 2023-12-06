@@ -1,0 +1,27 @@
+<!-- activity_recommendation.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/recommendationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recommendation_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true" />
+
+    <!-- TextView to display recommendation -->
+    <TextView
+        android:id="@+id/recommendationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recommendationTextView"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
