@@ -37,7 +37,7 @@
                     android:drawablePadding="8dp"
                     android:hint="Email"
                     android:padding="16dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/brown"
                     android:textSize="18sp" />
 
                 <EditText
@@ -50,7 +50,7 @@
                     android:drawablePadding="8dp"
                     android:hint="Password"
                     android:padding="16dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/brown"
                     android:textSize="18sp" />
 
                 <Button
@@ -70,7 +70,7 @@
                     android:layout_marginTop="6dp"
                     android:padding="8dp"
                     android:text="Forgot Password?"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/brown"
                     android:textSize="16sp" />
 
                 <TextView
@@ -81,7 +81,7 @@
                     android:layout_marginTop="14dp"
                     android:padding="8dp"
                     android:text="Not yet registered? Signup"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/brown"
                     android:textSize="18sp" />
 
             </LinearLayout>

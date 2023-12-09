@@ -1,5 +1,4 @@
 package com.android.glowguide
-
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -50,10 +49,7 @@ class PreferenceActivity : AppCompatActivity() {
 
             val hairType = hairTypeEditText.text.toString()
 
-            // Create inputs for the TensorFlow Lite model
-            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 2), DataType.FLOAT32)
-            val byteBuffer = createByteBuffer(selectedSkinType, hairType)
-            inputFeature0.loadBuffer(byteBuffer)
+
 
 
 
@@ -62,19 +58,19 @@ class PreferenceActivity : AppCompatActivity() {
                 "Skin Type" to selectedSkinType,
                 "Hair Type" to hairType
             )
-            getRecommendation(selectedSkinType,hairType)
+
 
             db.collection("user_preferences")
                 .add(userPreferences)
                 .addOnSuccessListener { documentReference ->
                     Toast.makeText(this@PreferenceActivity, "Preferences saved successfully", Toast.LENGTH_SHORT).show()
-
+                    getRecommendation(selectedSkinType,hairType)
                     // Launch RecommendationActivity and pass recommendation
-                    val intent = Intent(this@PreferenceActivity, RecommendationActivity::class.java)
+                    val intent = Intent(this@PreferenceActivity, ProductActivity::class.java)
                     startActivity(intent)
                 }
                 .addOnFailureListener { e ->
-                    Toast.makeText(this@PreferenceActivity, "Failed to save preferences", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@PreferenceActivity, "Preferences saved successfully", Toast.LENGTH_SHORT).show()
                 }
         }
     }
@@ -110,6 +106,7 @@ class PreferenceActivity : AppCompatActivity() {
                     val sharedPreferences: SharedPreferences = getSharedPreferences("Recommendation", Context.MODE_PRIVATE)
                     val editor: SharedPreferences.Editor = sharedPreferences.edit()
                     editor.putString("recommendedProduct", recommendedProduct)
+                    Toast.makeText(this@PreferenceActivity, "Recommended product: $recommendedProduct", Toast.LENGTH_SHORT).show()
 
                     editor.apply()
                 } else {

@@ -30,7 +30,7 @@
                 android:drawablePadding="8dp"
                 android:hint="Email"
                 android:padding="16dp"
-                android:textColor="@color/black"
+                android:textColor="@color/brown"
                 android:textSize="18sp" />
 
             <EditText
@@ -44,7 +44,7 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="16dp"
-                android:textColor="@color/grey"
+                android:textColor="@color/brown"
                 android:textSize="18sp" />
 
             <EditText
@@ -58,7 +58,7 @@
                 android:hint="Confirm Password"
                 android:inputType="textPassword"
                 android:padding="16dp"
-                android:textColor="@color/grey"
+                android:textColor="@color/brown"
                 android:textSize="18sp" />
 
             <Button
@@ -78,7 +78,7 @@
                 android:layout_marginTop="14dp"
                 android:padding="8dp"
                 android:text="Already an user? Login"
-                android:textColor="@color/lavender"
+                android:textColor="@color/brown"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
