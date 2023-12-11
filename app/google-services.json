@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "34675198193",
+    "project_id": "glow-guide-ec660",
+    "storage_bucket": "glow-guide-ec660.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34675198193:android:118ff5ce577d198ec20150",
+        "android_client_info": {
+          "package_name": "com.android.glowguide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD5KvRx-rs9_TjCgbnsB7KBa_XHSSzogo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
