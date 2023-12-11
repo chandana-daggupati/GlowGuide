@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/glowguide"
+        tools:context=".ProductActivity">
+
+
+    <LinearLayout
+        android:id="@+id/imageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/dry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dry_skin"
+                android:padding="4dp"/>
+
+            <ImageView
+                android:id="@+id/plum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plum"
+                android:padding="4dp"/>
+
+            <ImageView
+                android:id="@+id/sensitive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sensitive_skin"
+                android:padding="4dp"/>
+
+            <!-- Add more ImageViews as needed -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/minimalist"
+                android:padding="4dp"/>
+
+            <ImageView
+                android:id="@+id/dot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dot_key"
+                android:padding="4dp"/>
+
+            <ImageView
+                android:id="@+id/oily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/oily_skin"
+                android:padding="4dp"/>
+
+            <!-- Add more ImageViews as needed -->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
