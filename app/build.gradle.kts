@@ -61,9 +61,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.google.firebase:firebase-auth:22.2.0")
-    implementation("com.google.firebase:firebase-analytics:21.5.0")
-    implementation("com.google.firebase:firebase-firestore:24.9.1")
+
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.0")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
