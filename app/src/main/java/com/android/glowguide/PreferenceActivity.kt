@@ -33,11 +33,6 @@ class PreferenceActivity : AppCompatActivity() {
         setContentView(R.layout.activity_preference)
 
         db = FirebaseFirestore.getInstance()
-        skinTypeRadioGroup = findViewById(R.id.skinTypeRadioGroup)
-        hairTypeEditText = findViewById(R.id.hairTypeEditText)
-        saveButton = findViewById(R.id.saveButton)
-
-
 
         saveButton.setOnClickListener {
             val selectedSkinTypeId = skinTypeRadioGroup.checkedRadioButtonId
@@ -49,16 +44,11 @@ class PreferenceActivity : AppCompatActivity() {
 
             val hairType = hairTypeEditText.text.toString()
 
-
-
-
-
             // Save user preferences to Firestore if needed
             val userPreferences = hashMapOf(
                 "Skin Type" to selectedSkinType,
                 "Hair Type" to hairType
             )
-
 
             db.collection("user_preferences")
                 .add(userPreferences)
