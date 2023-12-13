@@ -1,79 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/glowguide"
-        tools:context=".ProductActivity">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/glowguide"
+    android:padding="8dp"
+    tools:context=".ProductActivity">
 
+    <!-- ImageView to display the girl.png image -->
+    <!-- Reference to the girl.png image -->
+ />
 
-    <LinearLayout
-        android:id="@+id/imageContainer"
+    <!-- TextView and Button components (same as previously defined) -->
+
+    <ImageView
+        android:id="@+id/imageGirl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/girl"
+        app:layout_constraintBottom_toTopOf="@+id/textRecom"
+        tools:layout_editor_absoluteX="8dp" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/textRecom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommended product"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703" />
 
-            <ImageView
-                android:id="@+id/dry"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dry_skin"
-                android:padding="4dp"/>
+    <Button
+        android:id="@+id/openWebButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:onClick="openWebLink"
+        android:text="Explore Products"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRecom"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/plum"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/plum"
-                android:padding="4dp"/>
-
-            <ImageView
-                android:id="@+id/sensitive"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/sensitive_skin"
-                android:padding="4dp"/>
-
-            <!-- Add more ImageViews as needed -->
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/mini"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/minimalist"
-                android:padding="4dp"/>
-
-            <ImageView
-                android:id="@+id/dot"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dot_key"
-                android:padding="4dp"/>
-
-            <ImageView
-                android:id="@+id/oily"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/oily_skin"
-                android:padding="4dp"/>
-
-            <!-- Add more ImageViews as needed -->
-        </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

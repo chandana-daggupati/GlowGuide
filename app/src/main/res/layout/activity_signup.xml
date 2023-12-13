@@ -15,7 +15,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="443dp"
             android:layout_marginTop="290dp"
             android:orientation="vertical"
             android:padding="20dp">
@@ -24,7 +24,7 @@
                 android:id="@+id/signup_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="1dp"
                 android:background="@drawable/lavender_border"
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
@@ -35,9 +35,9 @@
 
             <EditText
                 android:id="@+id/signup_password"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
                 android:background="@drawable/lavender_border"
                 android:drawableLeft="@drawable/baseline_lock_person_24"
                 android:drawablePadding="8dp"
@@ -49,9 +49,9 @@
 
             <EditText
                 android:id="@+id/signup_confirm"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
                 android:background="@drawable/lavender_border"
                 android:drawableLeft="@drawable/baseline_password_24"
                 android:drawablePadding="8dp"
@@ -63,10 +63,10 @@
 
             <Button
                 android:id="@+id/signup_button"
+                android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginTop="30dp"
                 android:text="Sign Up"
-                android:layout_width="match_parent"
                 android:textSize="18sp"
                 app:cornerRadius="30dp" />
 
@@ -83,7 +83,7 @@
         </LinearLayout>
     </LinearLayout>
 
-        </RelativeLayout>
+</RelativeLayout>
 
 
 

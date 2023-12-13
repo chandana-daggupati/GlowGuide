@@ -18,7 +18,7 @@ class RecommendationActivity : AppCompatActivity() {
         // Display the data in TextViews
         val skinTypeTextView: TextView = findViewById(R.id.skinProductsTextView)
         val hairTypeTextView: TextView = findViewById(R.id.hairProductsTextView)
-        val recommendedProductTextView: TextView = findViewById(R.id.recommendedProductTextView)
+        val recommendedProductTextView: TextView = findViewById(R.id.textRecom)
 
         skinTypeTextView.text = "Skin Type: $skinType"
         hairTypeTextView.text = "Hair Type: $hairType"

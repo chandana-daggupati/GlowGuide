@@ -1,40 +1,28 @@
 package com.android.glowguide // Your package name
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.LinearLayout
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.android.glowguide.R
-
 class ProductActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product)
 
-        val imageContainer: LinearLayout = findViewById(R.id.imageContainer)
+        // Retrieve the recommended product from intent extras
+        val recommendedProduct = intent.getStringExtra("RECOMMENDED_PRODUCT")
 
-        // Example: List of image resources (Replace with your own images)
-        val imageResources = listOf(
-            R.drawable.dot_key,
-            R.drawable.dry_skin,
-            R.drawable.minimalist,
-            R.drawable.plum,
-            R.drawable.sensitive_skin,
-            R.drawable.oily_skin
-
-        )
-
-        // Dynamically create ImageViews and add them to the LinearLayout
-        for (imageRes in imageResources) {
-            val imageView = ImageView(this)
-            imageView.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-            imageView.setImageResource(imageRes)
-            imageView.adjustViewBounds = true
-            imageContainer.addView(imageView)
-        }
+        // Set the recommended product in a TextView
+        val recommendedProductTextView = findViewById<TextView>(R.id.textRecom)
+        recommendedProductTextView.text = "Recommended Product: $recommendedProduct"
+    }
+    fun openWebLink(view: View) {
+        val url = "https://www.nykaa.com/sp/skin-native-desktop/skin" // Replace this with your web link
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse(url)
+        startActivity(intent)
     }
 }
+

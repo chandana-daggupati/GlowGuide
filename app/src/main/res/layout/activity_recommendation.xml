@@ -53,7 +53,7 @@
 
     <!-- TextView to display recommended product -->
     <TextView
-        android:id="@+id/recommendedProductTextView"
+        android:id="@+id/textRecom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/recommendationTextView"
